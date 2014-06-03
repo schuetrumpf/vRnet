@@ -1,6 +1,6 @@
 PROGRAM manipulate
 IMPLICIT NONE
-Integer :: n,ierr
+Integer :: n,ierr,offset=500
 Integer,PARAMETER :: nhmx=50000 ! The max number of thermo points
 INTEGER :: nh
 Real(8) :: tstart,tstop,th(nhmx),t9h(nhmx),rhoh(nhmx)
@@ -27,8 +27,8 @@ OPEN(20,file='th_nuwind_new',FORM='FORMATTED',STATUS='NEW')
  WRITE(20,*) tstart
  WRITE(20,*) tstop
  WRITE(20,*) tdelstart
- Do n=1,nh-1
-   WRITE(20,*) th(n),t9h(n),rhoh(n),yeh(n)
+ Do n=1,nh-1-offset
+   WRITE(20,*) th(n),t9h(n+offset),rhoh(n+offset),yeh(n+offset)
  EndDo
 CLOSE(20)
 END PROGRAM
