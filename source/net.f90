@@ -259,7 +259,7 @@ Program net
   
     yeh = 0.0                                                       !NSE
     Do n=1,nhmx
-      Read(lun_th,*,IOSTAT=ierr) th(n),t9h(n),rhoh(n) !NOTNSE !NOTNNU
+!      Read(lun_th,*,IOSTAT=ierr) th(n),t9h(n),rhoh(n) !NOTNSE !NOTNNU
       Read(lun_th,*,IOSTAT=ierr) th(n),t9h(n),rhoh(n),yeh(n) !NSE !NOTNNU
 !     Read(lun_th,*,IOSTAT=ierr) th(n),t9h(n),rhoh(n),yeh(n),fluxcms(n,:),tmevnu(n,:) !NNU
 
