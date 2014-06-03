@@ -20,12 +20,12 @@ CCFLAGS  =
 CXXFLAGS =
 
 ## Choose matrix solver package, "build" compiles LAPACK, others use existing libraries 
-#MATRIX_SOLVER = PARDISO
+MATRIX_SOLVER ?= PARDISO
 #MATRIX_SOLVER = MA28
 #MATRIX_SOLVER = MA48
 #MATRIX_SOLVER = gpu
-MATRIX_SOLVER = build
-MATRIX_SOLVER ?= dense
+#MATRIX_SOLVER = build
+#MATRIX_SOLVER ?= dense
 
 ## Choose EOS for screening; HELMHOLTZ (requires separate download) or BAHCALL
 #EOS = HELMHOLTZ

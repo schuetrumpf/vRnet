@@ -5,7 +5,7 @@ FC      =  gfortran
 LDR     = gfortran
 #  Compiler modes
 R8      =   -fdefault-real-8 -fdefault-double-8
-OPT     = -O3 -ftree-vectorize 
+OPT     = -O3 -ftree-vectorize -m64
 TRAP    = -fbacktrace -finit-real=nan
 DEBUG   = -C -g -g -fbounds-check $(TRAP) 
 PROFILE = -p -pg   
@@ -16,6 +16,6 @@ BASE    =
 # Libraries
 LAPACK_LIBDIR = 
 LAPACK_LIBS = 
-PARDISO_LIBDIR = 
-PARDISO_LIBS = 
+PARDISO_LIBDIR = -L/home/schuetrumpf/library
+PARDISO_LIBS = -lpardiso500-MPI-GNU463-X86-64
 PARDISO_INC = 

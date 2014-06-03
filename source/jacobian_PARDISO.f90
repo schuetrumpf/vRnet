@@ -98,7 +98,7 @@ Subroutine read_jacobian_data(data_dir)
 
 ! For Basel PARDISO libraries, call pardisoinit to initialize
 
-! call pardisoinit(pt,mtype,iparm)
+ call pardisoinit(pt,mtype,iparm)
 
 ! For MKL, pardisoinit is broken, instead set by hand.
   
