@@ -16,15 +16,16 @@ CMODE = DEBUG
 
 FFLAGS   = $(R8) 
 LDRFLAGS = $(R8)
-CCFLAGS  = 
-CXXFLAGS =
+CCFLAGS  = -m64
+CXXFLAGS = -m64
 
 ## Choose matrix solver package, "build" compiles LAPACK, others use existing libraries 
-MATRIX_SOLVER ?= PARDISO
+#MATRIX_SOLVER ?= PARDISO
 #MATRIX_SOLVER = MA28
 #MATRIX_SOLVER = MA48
 #MATRIX_SOLVER = gpu
-#MATRIX_SOLVER = build
+MATRIX_SOLVER = build
+MATRIX_SOLVER ?= PARDISO
 #MATRIX_SOLVER ?= dense
 
 ## Choose EOS for screening; HELMHOLTZ (requires separate download) or BAHCALL
@@ -98,7 +99,7 @@ BASE += $(EOS_OBJ)
 
 
 ## Configure Libraries and files to link appropriate matrix solver
-LIBS = 
+LIBS = -L/usr/lib64
 ifeq ($(MATRIX_SOLVER),MA28)
   EXTRA_OBJ  += MA28.o
 else ifeq ($(MATRIX_SOLVER),MA48)

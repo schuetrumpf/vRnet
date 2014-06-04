@@ -1,5 +1,5 @@
-GFORTRAN module version '6' created from jacobian_PARDISO.f90 on Tue Jun  3 21:36:43 2014
-MD5:6ee335762b9b2be701bee67de560945e -- If you edit this, you'll get what you deserve.
+GFORTRAN module version '6' created from jacobian_dense.f90 on Tue Jun  3 23:18:13 2014
+MD5:da75475d1233decc1e60cea39e4c7fef -- If you edit this, you'll get what you deserve.
 
 (() () () () () () () () () () () () () () () () () () () () () () ()
 () () () ())
@@ -20,140 +20,62 @@ UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 REAL ()) 0
 3 'be' 'nuclear_data' 'be' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 REAL ()) 0
 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-4 'cidx' 'jacobian_data' 'cidx' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+4 'ia' 'nuclear_data' 'ia' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4 0 0 INTEGER
 ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-5 'cols' 'jacobian_data' 'cols' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+5 'in' 'nuclear_data' 'in' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4 0 0 INTEGER
 ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-6 'ia' 'nuclear_data' 'ia' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+6 'indx' 'jacobian_data' 'indx' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4 0 0 INTEGER
 ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-7 'in' 'nuclear_data' 'in' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4 0 0 INTEGER
-()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-8 'inmax' 'nuclear_data' 'inmax' 1 ((VARIABLE UNKNOWN-INTENT
+7 'inmax' 'nuclear_data' 'inmax' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
 () 0 () () () 0 0)
-9 'inmin' 'nuclear_data' 'inmin' 1 ((VARIABLE UNKNOWN-INTENT
+8 'inmin' 'nuclear_data' 'inmin' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
 () 0 () () () 0 0)
-10 'iparm' 'jacobian_data' 'iparm' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 DIMENSION) (INTEGER 4 0 0 INTEGER
-()) 0 0 () (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
-CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '64')) 0 () () () 0 0)
-11 'iz' 'nuclear_data' 'iz' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+9 'iz' 'nuclear_data' 'iz' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4 0 0 INTEGER
 ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-12 'izmax' 'nuclear_data' 'izmax' 1 ((VARIABLE UNKNOWN-INTENT
+10 'izmax' 'nuclear_data' 'izmax' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
 () 0 () () () 0 0)
-13 'izmin' 'nuclear_data' 'izmin' 1 ((VARIABLE UNKNOWN-INTENT
+11 'izmin' 'nuclear_data' 'izmin' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
 () 0 () () () 0 0)
-14 'jacobian_data' 'jacobian_data' 'jacobian_data' 1 ((MODULE
+12 'jac' 'jacobian_data' 'jac' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 REAL ()) 0
+0 () (2 0 DEFERRED () () () ()) 0 () () () 0 0)
+13 'jacobian_data' 'jacobian_data' 'jacobian_data' 1 ((MODULE
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 UNKNOWN
 ()) 0 0 () () 0 () () () 0 0)
-15 'jacobian_type' 'jacobian_data' 'jacobian_type' 1 ((PARAMETER
+14 'jacobian_type' 'jacobian_data' 'jacobian_type' 1 ((PARAMETER
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0
-INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '2') () 0 () ()
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') () 0 () ()
 () 0 0)
-16 'l1s' 'jacobian_data' 'l1s' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () ()
-() 0 0)
-17 'l2s' 'jacobian_data' 'l2s' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () ()
-() 0 0)
-18 'l3s' 'jacobian_data' 'l3s' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () ()
-() 0 0)
-19 'lval' 'jacobian_data' 'lval' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
-() 0 () () () 0 0)
-20 'maxfct' 'jacobian_data' 'maxfct' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
-() 0 () () () 0 0)
-21 'mnum' 'jacobian_data' 'mnum' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
-() 0 () () () 0 0)
-22 'msglvl' 'jacobian_data' 'msglvl' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
-() 0 () () () 0 0)
-23 'mtype' 'jacobian_data' 'mtype' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
-() 0 () () () 0 0)
-24 'nn' 'nuclear_data' 'nn' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+15 'nn' 'nuclear_data' 'nn' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 REAL ()) 0
 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-25 'nname' 'nuclear_data' 'nname' 1 ((VARIABLE UNKNOWN-INTENT
+16 'nname' 'nuclear_data' 'nname' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (
 CHARACTER 1 0 0 CHARACTER ((CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '5')))
 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-26 'nrhs' 'jacobian_data' 'nrhs' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
-() 0 () () () 0 0)
-27 'ns11' 'jacobian_data' 'ns11' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-28 'ns21' 'jacobian_data' 'ns21' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-29 'ns22' 'jacobian_data' 'ns22' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-30 'ns31' 'jacobian_data' 'ns31' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-31 'ns32' 'jacobian_data' 'ns32' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-32 'ns33' 'jacobian_data' 'ns33' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-33 'nuc_number' 'nuc_number' 'nuc_number' 1 ((MODULE UNKNOWN-INTENT
+17 'nuc_number' 'nuc_number' 'nuc_number' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0
 () () () 0 0)
-34 'nuclear_data' 'nuclear_data' 'nuclear_data' 1 ((MODULE
+18 'nuclear_data' 'nuclear_data' 'nuclear_data' 1 ((MODULE
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 UNKNOWN
 ()) 0 0 () () 0 () () () 0 0)
-35 'ny' 'nuc_number' 'ny' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+19 'ny' 'nuc_number' 'ny' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () ()
 () 0 0)
-36 'pardiso_mem_stat' 'jacobian_data' 'pardiso_mem_stat' 1 ((VARIABLE
-UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0
-INTEGER ()) 0 0 () () 0 () () () 0 0)
-37 'pb' 'jacobian_data' 'pb' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4 0 0 INTEGER
-()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-38 'perm' 'jacobian_data' 'perm' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-39 'phase' 'jacobian_data' 'phase' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
-() 0 () () () 0 0)
-40 'pt' 'jacobian_data' 'pt' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN IMPLICIT-SAVE 0 0 DIMENSION) (INTEGER 8 0 0 INTEGER ()) 0 0 () (
-1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
-INTEGER 4 0 0 INTEGER ()) 0 '64')) 0 () () () 0 0)
-41 'ridx' 'jacobian_data' 'ridx' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
-0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-42 'sident' 'jacobian_data' 'sident' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
-0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-43 'tvals' 'jacobian_data' 'tvals' 1 ((VARIABLE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
-0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-44 'zz' 'nuclear_data' 'zz' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+20 'zz' 'nuclear_data' 'zz' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 REAL ()) 0
 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
 )
 
-('aa' 0 2 'be' 0 3 'cidx' 0 4 'cols' 0 5 'ia' 0 6 'in' 0 7 'inmax' 0 8
-'inmin' 0 9 'iparm' 0 10 'iz' 0 11 'izmax' 0 12 'izmin' 0 13
-'jacobian_data' 0 14 'jacobian_type' 0 15 'l1s' 0 16 'l2s' 0 17 'l3s' 0
-18 'lval' 0 19 'maxfct' 0 20 'mnum' 0 21 'msglvl' 0 22 'mtype' 0 23 'nn'
-0 24 'nname' 0 25 'nrhs' 0 26 'ns11' 0 27 'ns21' 0 28 'ns22' 0 29 'ns31'
-0 30 'ns32' 0 31 'ns33' 0 32 'nuc_number' 0 33 'nuclear_data' 0 34 'ny'
-0 35 'pardiso_mem_stat' 0 36 'pb' 0 37 'perm' 0 38 'phase' 0 39 'pt' 0
-40 'ridx' 0 41 'sident' 0 42 'tvals' 0 43 'zz' 0 44)
+('aa' 0 2 'be' 0 3 'ia' 0 4 'in' 0 5 'indx' 0 6 'inmax' 0 7 'inmin' 0 8
+'iz' 0 9 'izmax' 0 10 'izmin' 0 11 'jac' 0 12 'jacobian_data' 0 13
+'jacobian_type' 0 14 'nn' 0 15 'nname' 0 16 'nuc_number' 0 17
+'nuclear_data' 0 18 'ny' 0 19 'zz' 0 20)
